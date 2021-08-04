@@ -3,7 +3,7 @@
 # made by Uijun
 # DATE : 2016/01/13
 ################
-source /home/dpmuser/.nodebrew/env/bot_env.sh
+source /home/uijun.lee/.nodebrew/env/bot_env.sh
 
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 export CURRENT_USER=`echo $USER`
