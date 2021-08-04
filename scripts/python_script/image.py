@@ -18,8 +18,8 @@ import matplotlib.dates as mdates
 from datetime import datetime as dt
 
 
-almond_url = os.environ.get("ALMOND_URL")
-almond_auth = os.environ.get("ALMOND_AUTH")
+Jmysql_monitor_url = os.environ.get("JMYSQL_MONITOR_URL")
+Jmysql_monitor_auth = os.environ.get("JMYSQL_MONITOR_AUTH")
 
 
 color_table = list('bgrcmykw')
@@ -85,13 +85,13 @@ for k in type_table:
     type_table[k]['fields'].append('created_at')
 
 def generate_name(host_id):
-    return time.strftime("/tmp/almond." + host_id + ".%Y%m%d.%H%M%S.png")
+    return time.strftime("/tmp/Jmysql_monitor." + host_id + ".%Y%m%d.%H%M%S.png")
 
 def get_data(host_id, data_type):
-    url = str(almond_url)
+    url = str(Jmysql_monitor_url)
     url += "/instances/%s/%s.json" % (host_id, type_table[data_type]["key"])
     url += "?commit=Search"
-    url += "&" + str(almond_auth)
+    url += "&" + str(Jmysql_monitor_auth)
     url += "&range=%s" % type_table[data_type]["span"]
     return json.loads(urllib2.urlopen(url).read())
 

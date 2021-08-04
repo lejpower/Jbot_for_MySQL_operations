@@ -3,6 +3,7 @@
 # made by Uijun
 # DATE : 2016/01/13
 ################
+source /home/dpmuser/.nodebrew/env/bot_env.sh
 
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 export CURRENT_USER=`echo $USER`
@@ -12,7 +13,7 @@ export HUBOT_ADAPTER="hipchat"
 export HUBOT_HIPCHAT_TOKEN=${HIPCHAT_TOKEN}
 export HUBOT_HIPCHAT_JID=${HIPCHAT_JID}
 export HUBOT_HIPCHAT_PASSWORD=${HIPCHAT_PASSWORD}
-export HUBOT_HIPCHAT_ROOMS="${CHAT_ROOM}"
+export HUBOT_HIPCHAT_ROOMS="${CHAT_ROOM_NAME}"
 #export HUBOT_LOG_LEVEL=debug
 
 case "$1" in
