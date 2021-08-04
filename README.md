@@ -1,7 +1,15 @@
 # Jbot
 
-Jbot is a chat bot built on the [Hubot][hubot] framework. 
+Jbot is a chat bot built on the Hubot framework. 
 
+### prerequite
+```
+node installation
+Hubot installation
+Python2 (2.7.X)
+```
+
+### Execution
 You should set environment setting in "/home/uijun.lee/.nodebrew/env/bot_env.sh"
 ```
 PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
